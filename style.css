@@ -360,6 +360,8 @@ body {
 
   justify-content: center;
   align-items: center;
+
+  padding: 1rem; /* prevents edge clipping on mobile */
 }
 
 .modal-content {
@@ -374,6 +376,9 @@ body {
   z-index: 1001;
 
   animation: modalFade 0.25s ease;
+
+  max-height: 90vh;      /* prevents modal from exceeding screen */
+  overflow-y: auto;      /* enables scrolling inside modal */
 }
 
 /* Close button */
@@ -459,6 +464,40 @@ body {
 @keyframes modalFade {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================================== */
+/*                           MOBILE MODAL RESPONSIVE                          */
+/* ========================================================================== */
+
+@media (max-width: 900px) {
+
+  .modal-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+
+  .two-column-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+
+  .modal-media {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
 }
 
 /* ========================================================================== */
