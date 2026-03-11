@@ -24,13 +24,19 @@
 
   <!-- SIDE NAV -->
   <nav class="sidenav">
-    <ul>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <ul id="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
   <!-- SNAP SCROLL CONTAINER -->
@@ -331,6 +337,10 @@ function closeModal(id) {
   document.getElementById(id).style.display = "none";
 }
 
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("active");
+}
 window.addEventListener("click", function(e) {
   document.querySelectorAll(".modal").forEach(modal => {
     if (e.target === modal) {
