@@ -5,349 +5,417 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ty Thiemann | Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  >
-  <style>
-    /* Divider style */
-    .section-divider {
-      height: 6px;
-      background-color: black;
-      width: 100%;
-      margin: 2rem 0;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- SIDE NAV -->
-  <nav class="sidenav">
+<!-- ============================================================
+     HAMBURGER (mobile)
+============================================================ -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <span></span><span></span><span></span>
+</button>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-      ☰
+<!-- Nav overlay (mobile) -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ============================================================
+     SIDE NAV
+============================================================ -->
+<nav class="sidenav" id="sidenav" aria-label="Site navigation">
+
+  <div class="nav-brand">
+    Ty Thiemann
+    <span>Portfolio</span>
+  </div>
+
+  <ul>
+    <li><a href="#hero"       class="nav-link"><span class="dot"></span>Home</a></li>
+    <li><a href="#about"      class="nav-link"><span class="dot"></span>About</a></li>
+    <li><a href="#projects"   class="nav-link"><span class="dot"></span>Projects</a></li>
+    <li><a href="#experience" class="nav-link"><span class="dot"></span>Experience</a></li>
+    <li><a href="#contact"    class="nav-link"><span class="dot"></span>Contact</a></li>
+  </ul>
+
+  <div class="nav-footer">
+    Based in Australia<br>Open to opportunities
+  </div>
+
+</nav>
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+<div class="main">
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Computer Science Graduate</p>
+      <h1>Hi, I'm <span>Ty Thiemann</span></h1>
+      <p class="hero-sub">
+        Computer Science graduate focused on clean, modern solutions —
+        web development, performance, and interfaces that feel effortless to use.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View my work &rarr;</a>
+        <a href="#contact"  class="btn btn-ghost">Get in touch</a>
+      </div>
     </div>
+    <p class="hero-scroll">Scroll to explore</p>
+  </section>
 
-    <ul id="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="divider"></div>
 
-  </nav>
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <p class="section-label">About me</p>
+    <div class="about-grid">
 
-  <!-- SNAP SCROLL CONTAINER -->
-  <div class="scroll-container">
+      <div class="about-left">
+        <h2 class="section-title">Passionate about building things that work beautifully. &#9749;</h2>
 
-    <!-- HERO -->
-    <header id="hero" class="hero snap">
-      <div class="profile-image"></div>
-      <h1>Hi, I’m <span>Ty Thiemann</span></h1>
-      <p>Computer Science graduate focused on clean, modern solutions.</p>
-    </header>
+        <p class="about-intro">
+          I'm a Computer Science graduate passionate about creating clean,
+          scalable, and user-focused software solutions.
+        </p>
 
-    <!-- Divider -->
-    <div class="section-divider"></div>
+        <p class="about-body">
+          I love mixing solid coding skills with good design to create smooth,
+          modern digital experiences. I'm especially into web development,
+          making things run faster, and building interfaces that just feel right
+          for users.
+        </p>
 
-    <!-- ABOUT -->
-    <section id="about" class="section snap">
-      <div class="about-container">
-
-        <!-- Left Column: Intro + Highlights -->
-        <div class="about-left">
-          <h2>About Me☕</h2>
-          <p class="about-intro">
-            I’m a Computer Science graduate passionate about creating clean, scalable, and user-focused software solutions.
-          </p>
-
-          <p>
-            I love mixing solid coding skills with good design to create smooth, modern digital experiences. I’m especially into web development, making things run faster, and building interfaces that just feel right for users.
-          </p>
-
-          <div class="about-highlights">
-            <div>
-              <h4>🎓 Education</h4>
-              <p>Bachelor of Information Technology (2022 – 2025)</p>
-              <p>Major: Computer Science</p>
-              <p>Minor: Network Security</p>
-            </div>
-            <div>
-              <h4>💼 Focus</h4>
-              <p>Web-development, Agile methodoligies & Clean Architecture</p>
-            </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="icon">&#127891;</span>
+            <h4>Education</h4>
+            <p>Bachelor of IT (2022&ndash;2025)<br>Major: Computer Science<br>Minor: Network Security</p>
           </div>
-        </div>
-
-        <!-- Right Column: Skills & Tools -->
-        <div class="about-right">
-          <div class="about-card">
-            <h3>Programming Languages</h3>
-            <div class="skill-list">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Python</span>
-              <span>C#</span>
-            </div>
-          </div>
-
-          <div class="about-card">
-            <h3>Tools & Technologies</h3>
-            <div class="skill-list">
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>VS Code</span>
-              <span>Figma</span>
-              <span>Django</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="section-divider"></div>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section snap">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card" onclick="openModal('modal1')">
-          <div class="project-card-content">
-            <h3>EyeStrain</h3>
-            <p class="project-tagline">
-              Digital wellbeing desktop app focused on healthier screen habits.
-            </p>
-
-            <div class="project-tags">
-              <span>Java</span>
-              <span>JavaFX</span>
-              <span>Agile</span>
-            </div>
-
-            <span class="project-link">View Details →</span>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card" onclick="openModal('modal2')">
-          <div class="project-card-content">
-            <h3>GeoDesk AI</h3>
-            <p class="project-tagline">
-              Customisable Dashboard created with Python and Django to create a more 
-              pleasant user experience.
-            </p>
-
-            <div class="project-tags">
-              <span>JavaScript</span>
-              <span>Django</span>
-              <span>Python</span>
-            </div>
-
-            <span class="project-link">View Details →</span>
+          <div class="highlight-card">
+            <span class="icon">&#128188;</span>
+            <h4>Focus</h4>
+            <p>Web Development<br>Agile Methodologies<br>Clean Architecture</p>
           </div>
         </div>
       </div>
-    </section>
-<!-----------------------Modal 1----------------------- -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal1')">&times;</span>
 
-          <h3>EyeStrain</h3>
+      <div class="skills-col">
+        <div class="skill-block">
+          <h3>Programming Languages</h3>
+          <div class="badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python</span>
+            <span class="badge">C#</span>
+            <span class="badge">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3>Tools &amp; Technologies</h3>
+          <div class="badges">
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">Figma</span>
+            <span class="badge">Django</span>
+            <span class="badge">JavaFX</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3>Practices</h3>
+          <div class="badges">
+            <span class="badge">Agile / Scrum</span>
+            <span class="badge">TDD</span>
+            <span class="badge">OOP</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">UI/UX Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <p class="section-label">Selected work</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card" onclick="openModal('m1')" role="button" tabindex="0" aria-label="View EyeStrain project details">
+        <p class="project-num">01</p>
+        <h3>EyeStrain</h3>
+        <p class="project-tagline">
+          Digital wellbeing desktop app focused on healthier screen habits
+          through customisable reminders and break intervals.
+        </p>
+        <div class="project-tags">
+          <span>Java</span><span>JavaFX</span><span>Agile</span>
+        </div>
+        <p class="project-cta">View Details <span>&rarr;</span></p>
+      </article>
+
+      <article class="project-card" onclick="openModal('m2')" role="button" tabindex="0" aria-label="View GeoDesk AI project details">
+        <p class="project-num">02</p>
+        <h3>GeoDesk AI</h3>
+        <p class="project-tagline">
+          Customisable geospatial dashboard built with Python and Django
+          for a more pleasant and productive user experience.
+        </p>
+        <div class="project-tags">
+          <span>JavaScript</span><span>Django</span><span>Python</span>
+        </div>
+        <p class="project-cta">View Details <span>&rarr;</span></p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section reveal">
+    <p class="section-label">Work history</p>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <p class="exp-date">Jul 2024 &ndash;<br>Jun 2025</p>
+          <span class="exp-type">Technical</span>
+        </div>
+        <div class="exp-body">
+          <p class="exp-company">OreFox AI Limited</p>
+          <h3>Website Developer &amp; Team Leader &mdash; Work Integrated Learning</h3>
           <p>
-            A digital wellbeing desktop application designed to promote healthier
-            screen habits and reduce fatigue.
+            Designed and built a responsive, widget-based, user-customisable
+            dashboard with a team of four, utilising Agile methodologies throughout.
           </p>
-
-          <h4>Overview</h4>
-          <p>
-            Built in a team of five using Agile methodology, EyeStrain helps users
-            manage screen time through customizable notification reminders and
-            structured break intervals.
-          </p>
-
-          <h4>Key Contributions</h4>
           <ul>
-            <li>Developed customizable notification timer system</li>
-            <li>Applied object-oriented design principles</li>
-            <li>Improved UI readability and comfort</li>
-            <li>Implemented Test-Driven Development</li>
-            <li>Integrated back-end functionality</li>
+            <li><strong>Main Developer:</strong> Integrated profile-side saving for personalised dashboard settings.</li>
+            <li><strong>Frontend:</strong> Implemented draggable widgets via Sortable JS for interactive dashboards.</li>
+            <li><strong>UI/UX:</strong> Created high-fidelity Figma prototypes from stakeholder requirements.</li>
+            <li><strong>Backend:</strong> Built Django-powered widgets and user logout with scalable architecture.</li>
+            <li><strong>Leadership:</strong> Oversaw sprint planning, delegated tasks, and maintained stakeholder communication.</li>
           </ul>
-
-          <div class="modal-tags">
-            <span>Java</span>
-            <span>Maven</span>
-            <span>JavaFX</span>
-            <span>Agile</span>
-          </div>
-
-          <div class="modal-links">
-            <a href="https://github.com/KingKong74/CAB302_Desktop-application" target="_blank" rel="noopener">
-              GitHub →
-            </a>
-
-            <a href="https://drive.google.com/file/d/1JAMC6ZfcOH9XZh1LSP5hZQit_pcf5f7t/view?usp=sharing" target="_blank" rel="noopener">
-              Live Demo →
-            </a>
-          </div>
-
         </div>
       </div>
 
-<!-----------------------Modal 2----------------------- -->
-<div id="modal2" class="modal">
-    <div class="modal-content two-column-modal">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-
-        <!-- Left Column: Text -->
-        <div class="modal-text">
-            <h3>GeoDesk Ai – Work Integrated Learning</h3>
-            <h4>Final Year Capstone with OreFox Ai Limited</h4>
-
-            <p>
-                Designed and built a responsive, widget-based, user-customizable dashboard with my team for OreFox’s
-                GeoDesk web application, enabling miners, project managers, and analysts to visualize and manage geospatial data more effectively.
-                The dashboard features modular widgets and a scalable architecture, allowing users to tailor their workspace to specific operational needs and real-time data insights.
-            </p>
-
-            <p><strong>Tech Stack:</strong> JavaScript, Django, Python, HTML, CSS</p>
-
-            <ul>
-                <li>Developed UI prototypes using Figma, translating stakeholder requirements into high-fidelity mockups for implementation.</li>
-                <li>Implemented frontend features including Widget Library, Edit Dashboard tools, and responsive layout using JavaScript, HTML, and CSS for cohesive styling and interactivity.</li>
-                <li>Built backend functionality for Disaster Location Board widget, user logout, weather widget using Django with scalable, API-ready architecture.</li>
-                <li>Served as main developer, by integrating client-side dashboard customization and general dynamic UI functionality.</li>
-            </ul>
-
-            <div class="modal-links">
-                <a href="https://drive.google.com/file/d/1Bn1l06Kvl_NFHQAGHKyh1CvUUeJJ4aG2/view?usp=sharing&t=47" target="_blank">▶ Live Demo</a>
-            </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <p class="exp-date">Current</p>
+          <span class="exp-type">Non-Tech</span>
         </div>
-
-        <!-- Right Column: Media -->
-        <div class="modal-gallery">
-            <p>✦ Please watch demo video for better quality ✦</p>
-            <video id="modalVideo2" class="modal-media" controls playsinline>
-                <source src="images/geodeskgif1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="exp-body">
+          <p class="exp-company">Coles Group</p>
+          <h3>Customer Service &mdash; Part Time</h3>
+          <p>
+            Delivers excellent customer service in a fast-paced retail
+            environment while maintaining efficiency and professionalism.
+          </p>
+          <ul>
+            <li><strong>Customer Service:</strong> Strong communication and social confidence assisting customers daily.</li>
+            <li><strong>Reliability &amp; Teamwork:</strong> Consistent positive contribution to team dynamics.</li>
+            <li><strong>Compliance:</strong> Adheres to company procedures for smooth store operations.</li>
+          </ul>
         </div>
+      </div>
+
     </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <p class="section-label">Say hello</p>
+    <h2 class="section-title">Let's work together.</h2>
+    <p class="contact-sub">Open to junior developer roles and freelance projects.</p>
+    <a class="contact-email" href="mailto:tythiemann.dev@outlook.com">
+      &#9993; tythiemann.dev@outlook.com
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ty Thiemann. All rights reserved.</p>
+    <p>Built with HTML &middot; CSS &middot; JS</p>
+  </footer>
+
 </div>
 
-    <!-- MODAL 3 -->
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal3')">&times;</span>
-        <h3>Project Three – Full Details</h3>
-        <p><strong>Tech Stack:</strong> Django, JavaScript</p>
+
+<!-- ============================================================
+     MODALS
+============================================================ -->
+
+<!-- Modal 1: EyeStrain -->
+<div id="m1" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="m1-title">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m1')" aria-label="Close">&times;</button>
+    <div class="modal-tag-row">
+      <span>Java</span><span>JavaFX</span><span>Maven</span><span>Agile</span>
+    </div>
+    <h3 id="m1-title">EyeStrain</h3>
+    <h4>Overview</h4>
+    <p>
+      A digital wellbeing desktop application designed to promote healthier screen
+      habits and reduce eye fatigue. Built in a team of five using Agile methodology,
+      EyeStrain helps users manage screen time through customisable notification
+      reminders and structured break intervals.
+    </p>
+    <h4>Key Contributions</h4>
+    <ul>
+      <li>Developed customisable notification timer system</li>
+      <li>Applied object-oriented design principles throughout</li>
+      <li>Improved UI readability and visual comfort</li>
+      <li>Implemented Test-Driven Development practices</li>
+      <li>Integrated backend functionality with clean architecture</li>
+    </ul>
+    <div class="modal-links">
+      <a class="primary"   href="https://github.com/KingKong74/CAB302_Desktop-application" target="_blank" rel="noopener">GitHub &rarr;</a>
+      <a class="secondary" href="https://drive.google.com/file/d/1JAMC6ZfcOH9XZh1LSP5hZQit_pcf5f7t/view?usp=sharing" target="_blank" rel="noopener">&#9654; Live Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2: GeoDesk AI -->
+<div id="m2" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="m2-title">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('m2')" aria-label="Close">&times;</button>
+    <div class="modal-tag-row">
+      <span>JavaScript</span><span>Django</span><span>Python</span><span>HTML/CSS</span><span>Figma</span>
+    </div>
+    <h3 id="m2-title">GeoDesk AI &mdash; Capstone Project</h3>
+    <p class="exp-company" style="margin-bottom:0.5rem;">Work Integrated Learning &middot; OreFox AI Limited</p>
+    <div class="modal-two-col">
+      <div>
+        <h4>Overview</h4>
         <p>
-          More placeholder text here. You can also embed images,
-          videos, or additional screenshots inside this modal.
+          Responsive, widget-based, user-customisable dashboard enabling miners,
+          project managers, and analysts to visualise and manage geospatial data more effectively.
         </p>
+        <h4>Key Contributions</h4>
         <ul>
-          <li>Authentication system</li>
-          <li>REST API integration</li>
-          <li>Clean architecture approach</li>
+          <li>UI prototypes in Figma translating stakeholder requirements into high-fidelity mockups</li>
+          <li>Widget Library, Edit Dashboard tools, and responsive layout in JS/HTML/CSS</li>
+          <li>Django backend for Disaster Location Board, weather widget, and user logout</li>
+          <li>Profile-side saving for personalised dashboard configurations</li>
+          <li>Draggable, movable widgets using Sortable JS</li>
         </ul>
-        <a href="#">GitHub Link</a>
+        <div class="modal-links">
+          <a class="primary" href="https://drive.google.com/file/d/1Bn1l06Kvl_NFHQAGHKyh1CvUUeJJ4aG2/view?usp=sharing" target="_blank" rel="noopener">&#9654; Live Demo</a>
+        </div>
+      </div>
+      <div>
+        <video class="modal-video" controls playsinline>
+          <source src="images/geodeskgif1.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <p class="modal-note">&#10022; Watch the demo for best quality &#10022;</p>
       </div>
     </div>
-
-    <!-- Divider -->
-    <div class="section-divider"></div>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section snap">
-      <h2>Experience</h2>
-
-      <div class="experience-container">
-
-        <!-- Technical Experience -->
-        <div class="experience-item">
-          <div class="experience-header">
-            <h3>Website Developer & Team Leader - Work Integrated Learning (Technical)</h3>
-            <span>July 2024 - June 2025</span>
-          </div>
-          <p class="experience-company">OreFox Ai Limited</p>
-          <p>
-            Designed and built a responsive, widget-based, user-customizable dashboard with a team of 3 other developers, utilising AGILE methodologies.
-          </p>
-          <ul>
-            <li><strong>Main Developer:</strong> Integrated profile-side saving functionality for personalized user dashboard settings.</li>
-            <li><strong>Frontend Features:</strong> Implemented draggable and movable widgets using Sortable JS for interactive dashboards.</li>
-            <li><strong>UI/UX Design:</strong> Developed UI prototypes with Figma, translating stakeholder requirements into high-fidelity mockups.</li>
-            <li><strong>Backend Development:</strong> Built backend functionality for key widgets and user logout using Django, ensuring scalable architecture.</li>
-            <li><strong>Team Leadership:</strong> Oversaw sprint planning, delegated tasks, and maintained stakeholder communication.</li>
-          </ul>
-        </div>  
-
-        <!-- Non-Technical Experience -->
-        <div class="experience-item">
-          <div class="experience-header">
-            <h3>Coles Services - Customer Service (Non-Technical)</h3>
-            <span>Current</span>
-          </div>
-          <p class="experience-company">Part Time</p>
-          <p>
-            Provides excellent customer service while maintaining efficiency and professionalism in a fast-paced retail environment.
-          </p>
-          <ul>
-            <li><strong>Customer Service:</strong> Assists customers with questions, demonstrating strong communication and social confidence.</li>
-            <li><strong>Procedural Compliance:</strong> Follows company policies and procedures to ensure smooth store operations.</li>
-            <li><strong>Physical & Practical Skills:</strong> Handles trolleys, stock, and cleaning in extreme heat and demanding conditions.</li>
-            <li><strong>Reliability & Teamwork:</strong> Supports colleagues and contributes positively to team dynamics.</li>
-          </ul>
-        </div>  
-
-      </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="section-divider"></div>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section snap">
-      <h2>Contact</h2>
-      <p>Let’s work together.</p>
-      <p>Email: <strong>tythiemann.dev@outlook.com</strong></p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="snap">
-      <p>© 2025 Ty Thiemann. All rights reserved.</p>
-    </footer>
-
   </div>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
 <script>
-function openModal(id) {
-  document.getElementById(id).style.display = "flex";
-}
+  const hamburger = document.getElementById('hamburger');
+  const sidenav   = document.getElementById('sidenav');
+  const overlay   = document.getElementById('navOverlay');
 
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
-}
+  function openNav() {
+    sidenav.classList.add('open');
+    hamburger.classList.add('open');
+    overlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
 
-function toggleMenu() {
-  const nav = document.getElementById("nav-links");
-  nav.classList.toggle("active");
-}
-window.addEventListener("click", function(e) {
-  document.querySelectorAll(".modal").forEach(modal => {
-    if (e.target === modal) {
-      modal.style.display = "none";
+  function closeNav() {
+    sidenav.classList.remove('open');
+    hamburger.classList.remove('open');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () =>
+    sidenav.classList.contains('open') ? closeNav() : openNav()
+  );
+  overlay.addEventListener('click', closeNav);
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.35 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(id) {
+    const m = document.getElementById(id);
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+    m.querySelectorAll('video').forEach(v => v.pause());
+  }
+
+  document.querySelectorAll('.modal-overlay').forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+      closeNav();
     }
   });
-});
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+    });
+  });
 </script>
+
 </body>
 </html>
